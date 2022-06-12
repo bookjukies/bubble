@@ -140,7 +140,7 @@ my-bubble {
     width: 100vw;
     height: auto;
     position: fixed;
-    top: 0vh;
+    top: 1vh;
     left: 0;
     display: flex;
     align-items: center;
@@ -150,7 +150,7 @@ my-bubble {
   /* call to action link */
   .started_ {
     position: absolute;
-    bottom: 10vh;
+    bottom: 20vh;
     right: 1vw;
     width: 90vw;
     background-color: rgb(10, 85, 247);
@@ -194,4 +194,14 @@ my-bubble {
     padding: 0;
     width: 5vw;
   }
+    .controls_ {
+      width: 100vw;
+      display: flex;
+      position: fixed;
+      top: 4vh;
+      left: 0;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
 }
