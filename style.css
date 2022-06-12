@@ -1,6 +1,7 @@
-body{
+body {
   background-color: rgb(10, 85, 247);
 }
+
 my-bubble {
   position: fixed;
   bottom: 2vh;
@@ -12,7 +13,7 @@ my-bubble {
 }
 
 .icon_,
-.close_btn_{
+.close_btn_ {
   width: 1rem;
   background-color: rgba(0, 0, 0, 0.171);
   z-index: 1000;
@@ -20,10 +21,12 @@ my-bubble {
   padding: 1rem;
 
 }
-.icon_:hover{
+
+.icon_:hover {
   cursor: pointer;
-  background-color:rgb(10, 85, 247);
+  background-color: rgb(10, 85, 247);
 }
+
 .shuffle_ {
   width: 1rem;
 }
@@ -66,9 +69,11 @@ my-bubble {
   border-radius: 1rem;
   text-decoration: none;
 }
-#volume{
+
+#volume {
   align-self: center;
 }
+
 .started_ span {
   display: flex;
   flex-direction: column;
@@ -122,51 +127,69 @@ my-bubble {
   font-weight: 900;
   bottom: 11vh;
 }
+
 /* mobile style sheet */
 @media (max-width: 600px) {
-  .open_ {
-    width: 85vw;
+  my-bubble {
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
   }
+
+  .open_ {
+    width: 100vw;
+    height: 99vh;
+    position: fixed;
+    top: 1vh;
+    left: 0;
+
+  }
+
   /* call to action link */
-    .started_ {
-      position: absolute;
-      bottom: 10vh;
-      right: 2.5vw;
-      width: 80vw;
-      background-color: rgb(10, 85, 247);
-      padding: 2vh 0;
-      border-radius: 1rem;
-      text-decoration: none;
-    }
-    .words_ {
-      grid-area: gama;
-      right: 25vw;
-      width: 40vw;
-      background-color: white;
-      padding: 1rem 3rem;
-      border-radius: .5rem;
-      font-weight: 900;
-      bottom: 21vh;
-    }
-    .circle_ {
-      clip-path: circle(20% at 50% 50%);
-      width: 30vw;
-      height: 30vh;
-      right: 0;
-      grid-area: video;
-      bottom: 9vh;
-    }
-    .close_ {
-      right: 23vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5vw;
-      bottom: 29vh;
-    }
-    .close_btn_ {
-      border-radius: 5rem;
-      padding: 0;
-      width: 5vw;
-    }
+  .started_ {
+    position: absolute;
+    bottom: 10vh;
+    right: 1vw;
+    width: 90vw;
+    background-color: rgb(10, 85, 247);
+    padding: 2vh 0;
+    border-radius: 1rem;
+    text-decoration: none;
+    margin: 0 2vw;
+  }
+
+  .words_ {
+    grid-area: gama;
+    right: 25vw;
+    width: 40vw;
+    background-color: white;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    font-weight: 900;
+    bottom: 21vh;
+  }
+
+  .circle_ {
+    clip-path: circle(20% at 50% 50%);
+    width: 30vw;
+    height: 30vh;
+    right: 0;
+    grid-area: video;
+    bottom: 9vh;
+  }
+
+  .close_ {
+    right: 23vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5vw;
+    bottom: 29vh;
+  }
+
+  .close_btn_ {
+    border-radius: 5rem;
+    padding: 0;
+    width: 5vw;
+  }
 }
