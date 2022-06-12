@@ -140,7 +140,7 @@ my-bubble {
     width: 100vw;
     height: auto;
     position: fixed;
-    top: 1vh;
+    top: 4vh;
     left: 0;
     display: flex;
     align-items: center;
@@ -161,18 +161,22 @@ my-bubble {
   }
 
   .words_ {
-    grid-area: gama;
-    right: 25vw;
-    width: 40vw;
+    position: fixed;
+    right: 35vw;
+    width: fit-content;
     background-color: white;
-    padding: 1rem 3rem;
+    margin: 0;
+    padding: .5rem 1rem;
     border-radius: .5rem;
     font-weight: 900;
-    bottom: 21vh;
+    font-size: 1rem;
+    bottom: 23vh;
+    
+    white-space: nowrap;
   }
 
   .circle_ {
-    clip-path: circle(20% at 50% 50%);
+    clip-path: circle(25% at 50% 50%);
     width: 30vw;
     height: 30vh;
     right: 0;
@@ -181,7 +185,7 @@ my-bubble {
   }
 
   .close_ {
-    right: 23vw;
+    right: 25vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,13 +196,13 @@ my-bubble {
   .close_btn_ {
     border-radius: 5rem;
     padding: 0;
-    width: 5vw;
+    width: 1.5rem;
   }
     .controls_ {
       width: 100vw;
       display: flex;
       position: fixed;
-      top: 4vh;
+      top: 6vh;
       left: 0;
       justify-content: space-between;
       align-items: center;
