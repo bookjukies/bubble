@@ -1,6 +1,6 @@
-my-bubble {
+.bubble {
   position: fixed;
-  bottom: 2vh;
+  bottom: 0vh;
   right: 2vw;
 }
 
@@ -28,11 +28,11 @@ my-bubble {
 }
 
 .open_ {
-  width: 25vw;
+  width: 23.5vw;
 }
 
 .controls_ {
-  width: 23vw;
+  width: 21.5vw;
   display: flex;
   position: absolute;
   top: 1vh;
@@ -58,7 +58,7 @@ my-bubble {
 .started_ {
   position: absolute;
   bottom: 10vh;
-  right: 1.5vw;
+  right: .75vw;
   width: 22vw;
   background-color: rgb(10, 85, 247);
   padding: 2vh 0;
@@ -126,7 +126,7 @@ my-bubble {
 
 /* mobile style sheet */
 @media (max-width: 600px) {
-  my-bubble {
+  .bubble {
     position: fixed;
     bottom: 2vh;
     right: 2vw;

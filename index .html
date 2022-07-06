@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KLZW34P');</script>-->
+
+    <title>
+      Master Google Ads, scale accounts - remain relevant in an automated world.
+    </title>
+    <meta
+      name="description"
+      content="God Tier helps every Google Ads professional become more confident in their work, deliver consistent results and get rewarded for it."
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+  </head>
+
+  <body>
+    <span>
+      <style>
+        .bubble {
+          position: fixed;
+          bottom: 0vh;
+          right: 2vw;
+        }
+
+        .none_ {
+          display: none;
+        }
+
+        .icon_,
+        .close_btn_ {
+          width: 1rem;
+          background-color: rgba(0, 0, 0, 0.171);
+          z-index: 1000;
+          border-radius: 1.2rem;
+          padding: 1rem;
+        }
+
+        .icon_:hover {
+          cursor: pointer;
+          background-color: rgb(10, 85, 247);
+        }
+
+        .shuffle_ {
+          width: 1rem;
+        }
+
+        .open_ {
+          width: 23.5vw;
+        }
+
+        .controls_ {
+          width: 21.5vw;
+          display: flex;
+          position: absolute;
+          top: 1vh;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 0 0 1vh;
+        }
+
+        .left_ {
+          flex: 1;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        .container_ {
+          display: grid;
+          grid-template-columns: 2fr 2fr;
+          grid-template-areas: 'gama video';
+        }
+
+        .started_ {
+          position: absolute;
+          bottom: 10vh;
+          right: 0.75vw;
+          width: 22vw;
+          background-color: rgb(10, 85, 247);
+          padding: 2vh 0;
+          border-radius: 1rem;
+          text-decoration: none;
+          z-index: 1005;
+        }
+        .call_to_action_ {
+          position: absolute;
+          bottom: 10vh;
+          right: 0vw;
+          width: 22vw;
+        }
+        .more_options_ {
+          position: absolute;
+          bottom: 0vh;
+          right: 0.75vw;
+          width: 22vw;
+          padding: 1rem 0;
+          color: blue;
+          border-radius: 1rem;
+          font-size: 1rem;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+        #volume {
+          align-self: center;
+        }
+
+        .started_ span {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+        }
+
+        .video_ {
+          border-radius: 1rem;
+        }
+
+        .circle_ {
+          clip-path: circle(15% at 50% 50%);
+          width: 30vw;
+          height: 30vh;
+          right: 0;
+          grid-area: video;
+        }
+
+        .close_btn_ {
+          border-radius: 5rem;
+          padding: 0;
+          width: 2vw;
+        }
+
+        .fixed_ {
+          position: absolute;
+          bottom: 0vh;
+        }
+
+        .close_ {
+          right: 18vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5vw;
+          bottom: 20vh;
+        }
+
+        .words_ {
+          grid-area: gama;
+          right: 20vw;
+          width: max-content;
+          background-color: white;
+          padding: 1rem 2.5rem;
+          border-radius: 0.5rem;
+          font-weight: 900;
+          bottom: 11vh;
+        }
+
+        /* mobile style sheet */
+        @media (max-width: 600px) {
+          .bubble {
+            position: fixed;
+            bottom: 2vh;
+            right: 2vw;
+          }
+
+          .open_ {
+            width: 100vw;
+            height: auto;
+            position: fixed;
+            top: 4vh;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          /* call to action link */
+          .started_ {
+            position: absolute;
+            bottom: 20vh;
+            right: 1vw;
+            width: 90vw;
+            background-color: rgb(10, 85, 247);
+            padding: 2vh 0;
+            border-radius: 1rem;
+            text-decoration: none;
+            margin: 0 2vw;
+          }
+
+          .words_ {
+            position: fixed;
+            right: 35vw;
+            width: fit-content;
+            background-color: white;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 900;
+            font-size: 1rem;
+            bottom: 23vh;
+
+            white-space: nowrap;
+          }
+
+          .circle_ {
+            clip-path: circle(25% at 50% 50%);
+            width: 30vw;
+            height: 30vh;
+            right: 0;
+            grid-area: video;
+            bottom: 9vh;
+          }
+
+          .close_ {
+            right: 25vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5vw;
+            bottom: 29vh;
+          }
+
+          .close_btn_ {
+            border-radius: 5rem;
+            padding: 0;
+            width: 1.5rem;
+          }
+          .controls_ {
+            width: 100vw;
+            display: flex;
+            position: fixed;
+            top: 6vh;
+            left: 0;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+          }
+        }
+      </style>
+      <div class="bubble">
+        <!--ACTIVE VIDEO STATE-->
+        <div class="bubble_open_ none_">
+          <div>
+            <!-- VIDEO CONTROLS -->
+            <div class="controls_">
+              <div class="left_">
+                <img
+                  id="pause_"
+                  class="icon_"
+                  src="./assets/icons/pause.png"
+                  alt="pause"
+                />
+                <img
+                  id="play_"
+                  class="icon_ none_"
+                  src="./assets/icons/play.png"
+                  alt="play"
+                />
+                <img
+                  id="refresh_"
+                  class="icon_"
+                  src="./assets/icons/refresh.png"
+                  alt="refresh"
+                />
+                <img
+                  id="volume_"
+                  class="icon_ none_"
+                  src="./assets/icons/volume.png"
+                  alt="volume"
+                />
+                <img
+                  id="mute_"
+                  class="icon_"
+                  src="./assets/icons/mute.png"
+                  alt="mute"
+                />
+                <img
+                  id="close_"
+                  class="icon_"
+                  src="./assets/icons/close.png"
+                  alt="close"
+                />
+              </div>
+            </div>
+            <!-- CONTROLS END -->
+
+            <!-- VIDEO SORCER -->
+            <video muted autoplay loop class="video_ open_">
+              <source src="./assets/videos/test.mp4" type="video/mp4" />
+            </video>
+            <!--VIDEO SORCE END -->
+
+            <!--CALL TO ACTION BUTTON-->
+            <div class="call_to_action_">
+              <a class="started_ down_" href="#">
+                <span>
+                  <img
+                    class="shuffle_"
+                    src="./assets/icons/shuffle.png"
+                    alt="get started"
+                  />GET STARTED
+                </span>
+              </a>
+              <button class="more_options_">More Options</button>
+            </div>
+          </div>
+          <!--CALL TO ACTION BUTTON... END-->
+        </div>
+        <!--ACTIVE VIDEO STATE... END-->
+
+        <!--VIDEO BUBBLE-->
+        <div class="bubble_">
+          <div class="container_">
+            <!--TEXT NEXT TO VIDEO-->
+            <div class="words_ fixed_">Hey! Click Here 👉</div>
+
+            <!--VIDEO SOURCR-->
+            <video muted autoplay loop class="video_ circle_ fixed_">
+              <source src="./assets/videos/test.mp4" type="video/mp4" />
+            </video>
+
+            <!--CLOSE BUTTON-->
+            <div class="close_ fixed_">
+              <img
+                class="close_btn_"
+                src="./assets/icons/outer.png"
+                alt="close"
+              />
+            </div>
+            <!--CLOSE BUTTON END-->
+          </div>
+        </div>
+      </div>
+      <script>
+        //wait for the content to load
+        window.addEventListener(`load`, () => {
+          //selection
+          const bubble = document.querySelector(`.bubble`); //selecting the custum bubble tag !!!PS replaced as document!!!
+          const video_circle_ = bubble.querySelector(`.bubble_ .video_`); //none active video state
+          const circle_container_ = bubble.querySelector(`.bubble_`); //bottom video component
+          const open_container_ = bubble.querySelector(`.bubble_open_`);
+          const btns_ = bubble.querySelectorAll(`.controls_ .icon_`);
+          const video_ = open_container_.querySelector(`.video_`);
+
+          const pause_icon_ = bubble.querySelector(`#pause_`);
+          const play_icon_ = bubble.querySelector(`#play_`);
+          const volume_icon_ = bubble.querySelector(`#volume_`);
+          const mute_icon_ = bubble.querySelector(`#mute_`);
+          const close_btn_ = bubble.querySelector(`.close_btn_`);
+
+          // Fuctions
+          //funtion that opens the video
+          function open_() {
+            circle_container_.classList.add(`none_`);
+            open_container_.classList.remove(`none_`);
+
+            video_.play();
+            video_.muted = false;
+          }
+          //closes video active state
+          function close_() {
+            circle_container_.classList.remove(`none_`);
+            open_container_.classList.add(`none_`);
+          }
+          //restarts the video
+          function refresh_() {
+            video_.currentTime = 0;
+            video_.play();
+          }
+          function mute_() {
+            video_.muted = true;
+            volume_icon_.classList.add(`none_`);
+            mute_icon_.classList.remove(`none_`);
+          }
+
+          ///video controls
+          function control_() {
+            btns_.forEach((btn) => {
+              let id_ = btn.id;
+
+              btn.addEventListener(`click`, () => {
+                console.log(id_);
+                if (id_ == `close_`) {
+                  close_();
+                  mute_();
+                }
+                if (id_ == `pause_`) {
+                  video_.pause();
+                  pause_icon_.classList.add(`none_`);
+                  play_icon_.classList.remove(`none_`);
+                }
+                if (id_ == `play_`) {
+                  video_.play();
+                  pause_icon_.classList.remove(`none_`);
+                  play_icon_.classList.add(`none_`);
+                }
+                if (id_ == `refresh_`) {
+                  refresh_();
+                }
+                if (id_ == `volume_`) {
+                  video_.muted = false;
+                  volume_icon_.classList.add(`none_`);
+                  mute_icon_.classList.remove(`none_`);
+                }
+                if (id_ == `mute_`) {
+                  video_.muted = true;
+                  volume_icon_.classList.remove(`none_`);
+                  mute_icon_.classList.add(`none_`);
+                }
+              });
+            });
+          }
+
+          //event
+          //close the entire widget
+          close_btn_.addEventListener(`click`, () => {
+            bubble.classList.add(`none_`);
+          });
+          video_circle_.addEventListener(`click`, open_);
+          control_();
+        });
+      </script>
+    </span>
+
+    <!-- Google Tag Manager (noscript)
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLZW34P"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <a href="/"><img src="../images/god-tier-ads-logo.svg" /></a>
+        </div>
+        <div class="header-text">
+          <a href="https://app.godtierads.com">Log in</a>
+        </div>
+      </header>
+
+      <!-- home page -->
+      <main>
+        <div>
+          <div class="title">
+            Master Google Ads, deliver value and remain relevant in an automated
+            world.
+          </div>
+          <div class="subtitle">
+            God Tier enables Google Ads professionals to quickly advance their
+            skills, deliver consistent results and get rewarded for it.
+          </div>
+        </div>
+        <div>
+          <span class="product-box">
+            <a href="/framework/" style="text-decoration: none">
+              <div class="framework">
+                <span class="text">MASTER</span>
+              </div>
+            </a>
+            <div class="details">
+              <span class="title">The Performance Framework</span>
+              <p class="desc">
+                The only up-to-date Google Ads training that allows you to
+                consistently scale accounts, without being chained to your desk.
+              </p>
+            </div>
+            <a href="/framework/" class="button-block">START HERE</a>
+          </span>
+          <span class="product-box">
+            <a href="/forge/" style="text-decoration: none">
+              <div class="forge">
+                <span class="text">GROW</span>
+              </div>
+            </a>
+            <div class="details">
+              <span class="title">The Forge Community</span>
+              <p class="desc">
+                Forge is an exclusive community for agency owners looking to
+                explode their growth and level-up their team. Limited seats
+                available.
+              </p>
+            </div>
+            <a href="/forge/" class="button-block 2nd">LEARN MORE</a>
+          </span>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="footer">
+        <p>
+          <img src="../images/tell-me-have-you-seen-me.png" alt="credentials" />
+        </p>
+        <br />
+        <p>
+          copyright godlike ltd 2022, made with 💦 in the UK - your
+          <i
+            ><a href="https://godtierads.com/privacy/" target="_blank">priv</a>
+            my <a href="https://youtube.com/c/EdLeake" target="_blank">yt</a> &
+            <a href="https://www.linkedin.com/in/edleake/" target="_blank"
+              >li</a
+            ></i
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
