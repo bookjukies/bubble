@@ -85,7 +85,7 @@
           right: 0.75vw;
           width: 22vw;
           background-color: rgb(10, 85, 247);
-          padding: 2vh 0;
+          padding: 1rem 0;
           border-radius: 1rem;
           text-decoration: none;
           z-index: 1005;
@@ -96,18 +96,41 @@
           right: 0vw;
           width: 22vw;
         }
+        .option1_,
+        .option2_,
         .more_options_ {
-          position: absolute;
-          bottom: 0vh;
-          right: 0.75vw;
-          width: 22vw;
           padding: 1rem 0;
-          color: blue;
-          border-radius: 1rem;
+          border: solid blue 2px;
           font-size: 1rem;
           text-transform: uppercase;
           cursor: pointer;
+          margin-bottom: 0.5rem;
+          color: blue;
         }
+        .option1_ {
+          background-color: rgb(0, 85, 255);
+          color: white;
+        }
+        .more_options_ {
+          position: absolute;
+          bottom: -1vh;
+          right: 0.75vw;
+          width: 22vw;
+          color: blue;
+        }
+        .options_container_ {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 22vw;
+          right: 0.75vw;
+          bottom: -5vh;
+        }
+        .back_ {
+          color: white;
+          text-align: center;
+        }
+
         #volume {
           align-self: center;
         }
@@ -125,11 +148,12 @@
         }
 
         .circle_ {
-          clip-path: circle(15% at 50% 50%);
+          clip-path: circle(16.5% at 50% 50%);
           width: 30vw;
           height: 30vh;
           right: 0;
           grid-area: video;
+          z-index: 1002;
         }
 
         .close_btn_ {
@@ -144,23 +168,45 @@
         }
 
         .close_ {
-          right: 18vw;
+          right: 10vw;
           display: flex;
           justify-content: center;
           align-items: center;
           border-radius: 5vw;
-          bottom: 20vh;
+          bottom: 22vh;
         }
-
+        .border_ {
+          position: absolute;
+          width: 32vw;
+          height: 32vh;
+          background-color: rgb(183, 1, 52);
+          grid-area: video;
+          clip-path: circle(16.5% at 50% 50%);
+          right: -1vw;
+          bottom: -1vh;
+          z-index: 999;
+        }
         .words_ {
           grid-area: gama;
           right: 20vw;
           width: max-content;
           background-color: white;
-          padding: 1rem 2.5rem;
+          padding: 0.5rem 2.5rem;
           border-radius: 0.5rem;
+          border: 1px solid gray;
           font-weight: 900;
-          bottom: 11vh;
+          bottom: 8vh;
+        }
+        .get_help_ {
+          padding: 0.5rem 1rem 0 1rem;
+          border-radius: 1rem 1rem 0 0;
+          border: 1px solid grey;
+          width: min-content;
+          white-space: nowrap;
+          position: fixed;
+          bottom: 0;
+          right: 5vw;
+          background-color: white;
         }
 
         /* mobile style sheet */
@@ -300,16 +346,35 @@
 
             <!--CALL TO ACTION BUTTON-->
             <div class="call_to_action_">
-              <a class="started_ down_" href="#">
-                <span>
-                  <img
-                    class="shuffle_"
-                    src="./assets/icons/shuffle.png"
-                    alt="get started"
-                  />GET STARTED
-                </span>
-              </a>
-              <button class="more_options_">More Options</button>
+              <div class="started_container_">
+                <a class="started_ down_" href="#">
+                  <span>
+                    <!-- <img
+                      class="shuffle_"
+                      src="./assets/icons/shuffle.png"
+                      alt="get started"
+                    /> -->
+                    GET STARTED
+                  </span>
+                </a>
+                <button class="more_options_">More Options</button>
+              </div>
+              <!-- options -->
+              <div class="option_toggle_ none_">
+                <div class="options_container_">
+                  <button class="option1_ option_">Option 1</button>
+                  <button class="option2_ option_">Option 2</button>
+                  <div class="form_ none_">
+                    <script
+                      async
+                      data-uid="50835f96c0"
+                      src="https://little-star-530.ck.page/50835f96c0/index.js"
+                    ></script>
+                  </div>
+
+                  <span class="back_">GO BACK</span>
+                </div>
+              </div>
             </div>
           </div>
           <!--CALL TO ACTION BUTTON... END-->
@@ -326,7 +391,7 @@
             <video muted autoplay loop class="video_ circle_ fixed_">
               <source src="./assets/videos/test.mp4" type="video/mp4" />
             </video>
-
+            <div class="border_"></div>
             <!--CLOSE BUTTON-->
             <div class="close_ fixed_">
               <img
@@ -339,6 +404,9 @@
           </div>
         </div>
       </div>
+      <div class="get_help_ none_">
+        <span>Get Help 👋</span>
+      </div>
       <script>
         //wait for the content to load
         window.addEventListener(`load`, () => {
@@ -349,12 +417,19 @@
           const open_container_ = bubble.querySelector(`.bubble_open_`);
           const btns_ = bubble.querySelectorAll(`.controls_ .icon_`);
           const video_ = open_container_.querySelector(`.video_`);
-
+          const get_help_ = document.querySelector(`.get_help_`);
           const pause_icon_ = bubble.querySelector(`#pause_`);
           const play_icon_ = bubble.querySelector(`#play_`);
           const volume_icon_ = bubble.querySelector(`#volume_`);
           const mute_icon_ = bubble.querySelector(`#mute_`);
           const close_btn_ = bubble.querySelector(`.close_btn_`);
+          const more_btn_ = bubble.querySelector('.more_options_');
+          const get_started_ = bubble.querySelector('.started_container_');
+          const option_toggle_ = bubble.querySelector('.option_toggle_');
+          const back_btn = bubble.querySelector('.back_');
+          const form_ = bubble.querySelector('.form_');
+          const options_ = bubble.querySelectorAll(`.option_`);
+          const option1_ = options_[0];
 
           // Fuctions
           //funtion that opens the video
@@ -418,13 +493,48 @@
               });
             });
           }
-
+          //open more options function
+          function open_options_() {
+            get_started_.classList.add('none_');
+            option_toggle_.classList.remove('none_');
+          }
+          function close_options_() {
+            get_started_.classList.remove('none_');
+            option_toggle_.classList.add('none_');
+          }
+          //back button non the video functionallity
+          function back_() {
+            if (
+              form_.classList.contains('none_') &&
+              get_started_.classList.contains(`none_`)
+            ) {
+              close_options_();
+            } else {
+              options_.forEach((option) => {
+                option.classList.remove('none_');
+              });
+              form_.classList.add('none_');
+            }
+          }
           //event
           //close the entire widget
           close_btn_.addEventListener(`click`, () => {
             bubble.classList.add(`none_`);
+            get_help_.classList.remove(`none_`);
+          });
+          get_help_.addEventListener(`click`, () => {
+            bubble.classList.remove(`none_`);
+            get_help_.classList.add(`none_`);
           });
           video_circle_.addEventListener(`click`, open_);
+          more_btn_.addEventListener('click', open_options_);
+          back_btn.addEventListener(`click`, back_);
+          option1_.addEventListener('click', () => {
+            options_.forEach((option) => {
+              option.classList.add('none_');
+              form_.classList.remove('none_');
+            });
+          });
           control_();
         });
       </script>
