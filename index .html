@@ -39,10 +39,10 @@
         .icon_,
         .close_btn_ {
           width: 1rem;
-          background-color: rgba(0, 0, 0, 0.171);
+          background-color: rgb(255, 255, 255);
           z-index: 1000;
-          border-radius: 1.2rem;
-          padding: 1rem;
+          border-radius: 5rem;
+          padding: 0.5rem;
         }
 
         .icon_:hover {
@@ -68,10 +68,10 @@
           margin: 0 0 0 1vh;
         }
 
-        .left_ {
-          flex: 1;
-          display: flex;
-          justify-content: space-around;
+        .left_,
+        .right_ {
+          z-index: 10090;
+          padding: 0 0rem 0 0.5rem;
         }
 
         .container_ {
@@ -212,38 +212,45 @@
         }
 
         /* mobile style sheet */
-        @media (max-width: 600px) {
+
+        @media (max-width: 667px) {
           .bubble {
             position: fixed;
-            bottom: 2vh;
+            bottom: 0vh;
             right: 2vw;
           }
 
           .open_ {
-            width: 100vw;
+            width: 90vw;
             height: auto;
             position: fixed;
-            top: 4vh;
+            top: 10vh;
             left: 0;
             display: flex;
             align-items: center;
             justify-content: center;
           }
-
+          .call_to_action_ {
+            bottom: 2vh;
+          }
           /* call to action link */
           .started_ {
             position: absolute;
-            bottom: 20vh;
-            right: 1vw;
-            width: 90vw;
+            bottom: 18vh;
+            right: 9vw;
+            width: 85vw;
             background-color: rgb(10, 85, 247);
             border: 1px solid rgb(10, 85, 247);
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             border-radius: 1rem;
             text-decoration: none;
             margin: 0 2vw;
           }
-
+          .left_,
+          .right_ {
+            z-index: 10090;
+            padding: 0 4rem 0 0;
+          }
           .words_ {
             position: fixed;
             right: 35vw;
@@ -274,16 +281,16 @@
           }
           .more_options_ {
             position: absolute;
-            right: 3vw;
+            right: 11vw;
 
-            width: 90vw;
-            padding: 1.5rem 0;
-            bottom: 7vh;
+            width: 85vw;
+            padding: 1rem 0;
+            bottom: 2vh;
           }
           .options_container_ {
-            width: 90vw;
-            bottom: 6vh;
-            right: 3vw;
+            width: 85vw;
+            bottom: 2vh;
+            right: 11vw;
           }
 
           .close_ {
@@ -304,11 +311,43 @@
             width: 100vw;
             display: flex;
             position: fixed;
-            top: 6vh;
+            top: 11vh;
             left: 0;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
+          }
+        }
+        @media only screen and (min-device-height: 750px) and (max-device-width: 667px) {
+          .call_to_action_ {
+            bottom: 10vh;
+          }
+          .more_options_ {
+            bottom: 10vh;
+          }
+          .started_ {
+            position: absolute;
+            bottom: 18vh;
+            right: 9vw;
+            width: 85vw;
+            background-color: rgb(10, 85, 247);
+            border: 1px solid rgb(10, 85, 247);
+            padding: 1rem 0;
+            border-radius: 1rem;
+            text-decoration: none;
+            margin: 0 2vw;
+          }
+          .more_options_ {
+            position: absolute;
+            right: 11vw;
+
+            width: 85vw;
+            padding: 1rem 0;
+          }
+          .options_container_ {
+            width: 85vw;
+            bottom: 8vh;
+            right: 11vw;
           }
         }
       </style>
@@ -322,13 +361,13 @@
                 <img
                   id="pause_"
                   class="icon_"
-                  src="./assets/icons/pause.png"
+                  src="./assets/icons/pause.jpg"
                   alt="pause"
                 />
                 <img
                   id="play_"
                   class="icon_ none_"
-                  src="./assets/icons/play.png"
+                  src="./assets/icons/play.jpg"
                   alt="play"
                 />
                 <img
@@ -340,15 +379,17 @@
                 <img
                   id="volume_"
                   class="icon_ none_"
-                  src="./assets/icons/volume.png"
+                  src="./assets/icons/volume.jpg"
                   alt="volume"
                 />
                 <img
                   id="mute_"
                   class="icon_"
-                  src="./assets/icons/mute.png"
+                  src="./assets/icons/mute.jpg"
                   alt="mute"
                 />
+              </div>
+              <div class="right_">
                 <img
                   id="close_"
                   class="icon_"
@@ -372,7 +413,7 @@
                   <span>
                     <!-- <img
                       class="shuffle_"
-                      src="./assets/icons/shuffle.png"
+                      src="./assets/icons/shuffle.jpg"
                       alt="get started"
                     /> -->
                     GET STARTED
@@ -417,7 +458,7 @@
             <div class="close_ fixed_">
               <img
                 class="close_btn_"
-                src="./assets/icons/outer.png"
+                src="./assets/icons/close.png"
                 alt="close"
               />
             </div>
@@ -625,7 +666,7 @@
     <footer>
       <div class="footer">
         <p>
-          <img src="../images/tell-me-have-you-seen-me.png" alt="credentials" />
+          <img src="../images/tell-me-have-you-seen-me.jpg" alt="credentials" />
         </p>
         <br />
         <p>
