@@ -231,12 +231,17 @@
             justify-content: center;
           }
           .call_to_action_ {
-            bottom: 2vh;
+            bottom: 7rem;
+            display: grid;
+            grid-template-areas:
+              'option1'
+              'option2'
+              'option3';
+            row-gap: 4rem;
           }
           /* call to action link */
           .started_ {
             position: absolute;
-            bottom: 18vw;
             right: 9vw;
             width: 85vw;
             background-color: rgb(10, 85, 247);
@@ -245,6 +250,8 @@
             border-radius: 1rem;
             text-decoration: none;
             margin: 0 2vw;
+            bottom: 0;
+            grid-area: option1;
           }
           .left_,
           .right_ {
@@ -285,11 +292,12 @@
 
             width: 85vw;
             padding: 1rem 0;
-            bottom: 0vh;
+
+            grid-area: option2;
           }
           .options_container_ {
             width: 85vw;
-            bottom: 2vh;
+            bottom: 0;
             right: 11vw;
           }
 
@@ -318,34 +326,10 @@
             z-index: 1000;
           }
         }
-        @media only screen and (min-device-height: 750px) and (max-device-width: 667px) {
+        @media (max-width: 380px){
+                    }
           .call_to_action_ {
-            bottom: 10vh;
-          }
-
-          .started_ {
-            position: absolute;
-            bottom: 16vh;
-            right: 9vw;
-            width: 85vw;
-            background-color: rgb(10, 85, 247);
-            border: 1px solid rgb(10, 85, 247);
-            padding: 1rem 0;
-            border-radius: 1rem;
-            text-decoration: none;
-            margin: 0 2vw;
-          }
-          .more_options_ {
-            position: absolute;
-            right: 11vw;
-            bottom: 6vh;
-            width: 85vw;
-            padding: 1rem 0;
-          }
-          .options_container_ {
-            width: 85vw;
-            bottom: 8vh;
-            right: 11vw;
+            bottom: 4rem;
           }
         }
       </style>
