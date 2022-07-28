@@ -297,7 +297,7 @@
           }
           .options_container_ {
             width: 85vw;
-            bottom: 0;
+            bottom: 1.5rem;
             right: 11vw;
           }
 
@@ -326,10 +326,50 @@
             z-index: 1000;
           }
         }
-        @media (max-width: 380px){
-                    }
+        @media (max-width: 380px) {
           .call_to_action_ {
             bottom: 2rem;
+          }
+        }
+
+        @media (max-width: 960px) AND (min-height: 700px) {
+          .bubble {
+            bottom: 4vh;
+            left: 2vw;
+          }
+
+          .open_ {
+            width: 90vw;
+            height: 80vh;
+            bottom: 10vh;
+            left: 0;
+          }
+          .controls_ {
+            width: 100vw;
+            top: 2rem;
+            left: 16vw;
+            margin: 0 2rem;
+          }
+          .right_ {
+            position: fixed;
+            left: 65vw;
+            z-index: 10090;
+            padding: 0 4rem 0 0;
+          }
+          .call_to_action_ {
+            position: fixed;
+            right: 27.5vw;
+            width: 75vw;
+            row-gap: 0rem;
+            bottom: 12vh;
+          }
+          .started_,
+          .more_options_,
+          .options_container_ {
+            width: 50vw;
+          }
+          .started_ {
+            bottom: 5vh;
           }
         }
       </style>
